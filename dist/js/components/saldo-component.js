@@ -13,9 +13,16 @@ function renderizarSaldo() {
     }
 }
 renderizarSaldo();
+elementoSaldo.classList.add("blurred");
 elementoIconeOlho.addEventListener("click", () => {
     if (elementoSaldo != null) {
         elementoSaldo.classList.toggle("blurred");
+    }
+    if (!elementoSaldo.classList.contains("blurred")) {
+        elementoIconeOlho.src = "./images/olho-normal.png";
+    }
+    else {
+        elementoIconeOlho.src = "./images/olho-riscado.png";
     }
 });
 const SaldoComponent = {
